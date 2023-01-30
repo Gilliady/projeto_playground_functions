@@ -53,7 +53,14 @@ const generatePhoneNumber = (array) => {
 };
 console.log(generatePhoneNumber([0, 1, 6]));
 // Desafio 12 -  Crie a função triangleCheck
-
+const triangleCheck = (lineA, lineB, lineC) => {
+  let isATriangle = false;
+  if (lineA < lineB + lineC && lineA > Math.abs(lineC - lineB)) {
+    isATriangle = true;
+  }
+  return isATriangle;
+};
+console.log(triangleCheck(10, 14, 8));
 // Desafio 13 - Crie a função hydrate
 
 /* eslint no-undef: 0 */
