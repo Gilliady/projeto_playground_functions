@@ -51,7 +51,6 @@ const generatePhoneNumber = (array) => {
   }
   return message;
 };
-console.log(generatePhoneNumber([0, 1, 6]));
 // Desafio 12 -  Crie a função triangleCheck
 const triangleCheck = (lineA, lineB, lineC) => {
   let isATriangle = false;
@@ -60,9 +59,18 @@ const triangleCheck = (lineA, lineB, lineC) => {
   }
   return isATriangle;
 };
-console.log(triangleCheck(10, 14, 8));
 // Desafio 13 - Crie a função hydrate
-
+const hydrate = (drinks) => {
+  let reg = /\d+/g;
+  let sum = 0;
+  let numbers = drinks.match(reg);
+  console.log(numbers);
+  for (const number of numbers) {
+    sum += parseInt(number, 10);
+  }
+  return sum > 1 ? `${sum} copos de água` : `${sum} copo de água`;
+};
+console.log(hydrate('1 cachaça, 5 cervejas e 1 copo de vinho'));
 /* eslint no-undef: 0 */
 
 // Não modifique essas linhas
