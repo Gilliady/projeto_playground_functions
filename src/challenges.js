@@ -79,7 +79,42 @@ const fizzBuzz = (array) => {
 };
 console.log(fizzBuzz([5, 9]));
 // Desafio 9 - Crie a função encode e a função decode
-
+let codeAlphabet = {
+  a: 1,
+  e: 2,
+  i: 3,
+  o: 4,
+  u: 5,
+  1: 'a',
+  2: 'e',
+  3: 'i',
+  4: 'o',
+  5: 'u',
+};
+const encode = (phrase) => {
+  let newPhrase = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (Object.hasOwnProperty.call(codeAlphabet, phrase[index])) {
+      newPhrase += codeAlphabet[phrase[index]];
+    } else {
+      newPhrase += phrase[index];
+    }
+  }
+  return newPhrase;
+};
+const decode = (phrase) => {
+  let newPhrase = '';
+  for (let index = 0; index < phrase.length; index += 1) {
+    if (Object.hasOwnProperty.call(codeAlphabet, phrase[index])) {
+      console.log(phrase[index]);
+      newPhrase += codeAlphabet[phrase[index]];
+      console.log(newPhrase);
+    } else {
+      newPhrase += phrase[index];
+    }
+  }
+  return newPhrase;
+};
 // Desafio 10 - Crie a função techList
 
 // Não modifique essas linhas
