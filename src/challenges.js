@@ -43,7 +43,21 @@ const calcAllAreas = (base, height, form) => {
   return returnString;
 };
 // Desafio 7 - Crie a função catAndMouse
-
+const catAndMouse = (mouse, cat1, cat2) => {
+  let distanceCat1 = cat1 - mouse;
+  let distanceCat2 = cat2 - mouse;
+  if (distanceCat1 < 0) distanceCat1 *= -1;
+  if (distanceCat2 < 0) distanceCat2 *= -1;
+  let closest;
+  if (distanceCat1 < distanceCat2) {
+    closest = 'cat1';
+  } else if (distanceCat2 < distanceCat1) {
+    closest = 'cat2';
+  } else {
+    closest = 'os gatos trombam e o rato foge';
+  }
+  return closest;
+};
 // Desafio 8 - Crie a função fizzBuzz
 
 // Desafio 9 - Crie a função encode e a função decode
