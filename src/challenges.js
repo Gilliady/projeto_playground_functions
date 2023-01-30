@@ -3,9 +3,9 @@ const compareTrue = (boolean1, boolean2) => (boolean1 && boolean2);
 // Desafio 2 - Crie a função splitSentence
 const splitSentence = (phrase) => phrase.split(' ');
 // Desafio 3 - Crie a função concatName
-
+const concatName = (array) => `${array[array.length - 1]}, ${array[0]}`;
 // Desafio 4 - Crie a função footballPoints
-
+console.log(concatName(['Lucas', 'ferraz', 'paolillo']));
 // Desafio 5 - Crie a função highestCount
 
 // Desafio 6 - Crie as funções calcTriangleArea, calcRectangleArea e calcAllAreas
