@@ -116,7 +116,17 @@ const decode = (phrase) => {
   return newPhrase;
 };
 // Desafio 10 - Crie a função techList
-
+const techList = (array, string) => {
+  const tech = [];
+  array.sort();
+  if (array.length > 0 && string.length > 0) {
+    for (const technology of array) {
+      tech.push({ tech: technology, name: string });
+    }
+  }
+  return tech;
+};
+console.log(techList(['React', 'Jest', 'HTML', 'CSS', 'JavaScript'], 'Lucas'));
 // Não modifique essas linhas
 module.exports = {
   calcTriangleArea: typeof calcTriangleArea === 'function' ? calcTriangleArea : (() => {}),
